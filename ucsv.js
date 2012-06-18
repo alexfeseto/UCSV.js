@@ -21,7 +21,7 @@ var CSV = (function () {
 
 	var rxIsInt = /^\d+$/,
 	rxIsFloat = /^\d*\.\d+$|^\d+\.\d*$/,
-	rxNeedsQuoting = /^\s|\s$|,|"/,
+	rxNeedsQuoting = /^\s|\s$|,|"|\n|\f|\r/,
 	trim = (function () {
 		// Fx 3.1 has a native trim function, it's about 10x faster, use it if it exists
 		if (String.prototype.trim) {
